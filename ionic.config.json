@@ -1,0 +1,12 @@
+{
+  "name": "go-outdoors-pic-app",
+  "app_id": "8b142055",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

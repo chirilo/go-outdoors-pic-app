@@ -1,9 +1,9 @@
 <ion-view class="login-page">
     <ion-content>
-        <div class="banner-login div-img" style="background-image: url('http://www.outpax.co/assets/uploads/events/1-1449376074.jpg')">
+        <div class="banner-login div-img" style="background-image: url('img/unsplash3.jpg')">
         </div>
         <div fit vertical layout>
-            <div class="header-login" vertical layout>
+            <!-- <div class="header-login" vertical layout>
                 <div flex class="logo balanced" vertical center-justified center layout>
                     
                 </div>
@@ -15,7 +15,7 @@
                         Sign up <i class="ion ion-android-arrow-dropup"></i>
                     </a>
                 </div>
-            </div>
+            </div> -->
             <!-- <ion-slide-box on-slide-changed="slideHasChanged($index)" flex show-pager="false">
                 <ion-slide>
                     <div class="form-login">
@@ -141,6 +141,20 @@
                 </ion-slide>
                 
               </ion-slide-box>
+
+            <div class="header-login" vertical layout>
+                <div flex class="logo balanced" vertical center-justified center layout>
+                    
+                </div>
+                <div class="action-login">
+                    <a ng-class="{active: !data.view}" ng-click="nextSlide(0)">
+                        Sign in <i class="ion ion-android-arrow-dropup"></i>
+                    </a>
+                    <a ng-class="{active: data.view}" ng-click="nextSlide(1)">
+                        Sign up <i class="ion ion-android-arrow-dropup"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </ion-content>
 </ion-view>

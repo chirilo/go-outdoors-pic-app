@@ -1,11 +1,11 @@
 <ion-view class="login-page">
     <ion-content>
-        <div class="banner-login div-img" style="background-image: url('http://media.foodnetwork.ca/imageserve/wp-content/uploads/sites/6/2015/01/Mini_Berry_Tarts_recipe-Anna-Olson/x.jpg')">
+        <div class="banner-login div-img" style="background-image: url('http://www.outpax.co/assets/uploads/events/1-1449376074.jpg')">
         </div>
         <div fit vertical layout>
             <div class="header-login" vertical layout>
-                <div flex class="logo balanced" horizontal center-justified center layout>
-                    Muslim Chef
+                <div flex class="logo balanced" vertical center-justified center layout>
+                    
                 </div>
                 <div class="action-login">
                     <a ng-class="{active: !data.view}" ng-click="nextSlide(0)">
@@ -16,7 +16,7 @@
                     </a>
                 </div>
             </div>
-            <ion-slide-box on-slide-changed="slideHasChanged($index)" flex show-pager="false">
+            <!-- <ion-slide-box on-slide-changed="slideHasChanged($index)" flex show-pager="false">
                 <ion-slide>
                     <div class="form-login">
                         <input type="text" placeholder="E-mail" ng-model="data.user.email"/>
@@ -64,7 +64,83 @@
                         </div>
                     </div>
                 </ion-slide>
-            </ion-slide-box>
+            </ion-slide-box> -->
+            <!-- <ion-slide-box delegate-handle="sign-in-register" active-slide="vm.slideCtrl.index" auto-play="false" show-pager="false" slide-interval="" pager-click="" on-slide-changed=""> -->
+            <ion-slide-box on-slide-changed="slideHasChanged($index)" flex show-pager="false">
+                <ion-slide class="sign-in">
+                  <ion-scroll>
+                    <div class="list">
+                      <div class="item">
+                        <!-- <button ng-click="loginFacebook()" class="button button-block button-positive light icon ion-social-facebook">&nbsp; Sign-in with Facebook</button> -->
+                        <button class="button button-block button-positive mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">Log-in with Facebook<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 2301.92px; height: 2301.92px; transform: translate(-50%, -50%) translate(599px, 23px);"></span></span></button>
+                        <div class="text-center larger">&mdash; or &mdash;</div>
+                      </div>
+                      <!-- <div class="item">
+                        <div class="text-center larger">&mdash; or &mdash;</div>
+                      </div> -->
+                      <div class="">
+                        <!-- <form name="signInForm" novalidate="" ng-submit="vm.on.signIn(person);"> -->
+                        <form name="signInForm" novalidate="" >
+                          <label class="item item-input"><i class="icon ion-person padding-horizontal larger"></i>
+                            <!-- <input type="text" name="Username" placeholder="Username" ng-model="person.username" required="required"/> -->
+                            <input type="text" placeholder="E-mail" ng-model="data.user.email"/>
+                            
+                          </label>
+                          <!-- <div ng-show="vm['error']['username']" class="error"><span class="assertive">{{vm['error']['username']}}</span></div> -->
+                          <label class="item item-input"><i class="icon ion-locked padding-horizontal larger"></i>
+                            <!-- <input type="password" name="Password" placeholder="Password" ng-model="person.password" required="required"/> -->
+                            <input type="password" placeholder="Password" ng-model="data.user.password"/>
+                          </label>
+                          <div class="item">
+                            <div class="button-bar">
+                              <!-- <button ng-click="closeModal('CANCELED')" class="button button-balanced button-outline">Cancel</button> -->
+                              <button type="submit" class="button button-balanced" ng-click="login()">Log in</button>
+                            </div> 
+                          </div>
+                          <!-- <div class="item positive text-left">
+                            <div class="text-right"><a ng-click="">Forgot Password?</a></div><a ng-click="nextSlide(0)"><i class="icon ion-android-arrow-back padding-left"></i> Sign up</a>
+                          </div> -->
+                        </form>
+                      </div>
+                    </div>
+                  </ion-scroll>
+                </ion-slide>
+                <ion-slide class="sign-up">
+                  <ion-scroll>
+                    <div class="list">
+                      <div class="item">
+                        <button class="button button-block button-positive mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">&nbsp; Sign-up with Facebook</button>
+                        <div class="text-center larger">&mdash; or &mdash;</div>
+                      </div>
+                      <!-- <div class="item">
+                        <div class="text-center larger">&mdash; or &mdash;</div>
+                      </div> -->
+                      <div class="">
+                        <form name="registerForm" novalidate="">
+                          
+                          <label class="item item-input"><i class="icon ion-email padding-horizontal larger"></i>
+                            <input type="text" name="Email" placeholder="Email" ng-model="person.email" required="required"/>
+                          </label>
+                          <label class="item item-input"><i class="icon ion-locked padding-horizontal larger"></i>
+                            <input type="password" name="Password" placeholder="Password" ng-model="person.password" required="required"/>
+                          </label>
+                          
+                          <div class="item">
+                            <div class="button-bar">
+                              <!-- <button ng-click="closeModal('CANCELED')" class="button button-balanced button-outline">Cancel</button> -->
+                              <button type="submit" class="button button-balanced">Sign up</button>
+                            </div>
+                          </div>
+                          <!-- <div class="item positive">
+                            <div class="text-right"> <a ng-click="vm.slideCtrl.setSlide('signin')">Have an account? Sign in <i class="icon ion-android-arrow-forward padding-right"></i></a></div>
+                          </div> -->
+                        </form>
+                      </div>
+                    </div>
+                  </ion-scroll>
+                </ion-slide>
+                
+              </ion-slide-box>
         </div>
     </ion-content>
 </ion-view>

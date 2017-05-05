@@ -5,7 +5,7 @@ angular.module('starter')
     $scope.data = {};
     $scope.data.view = 0;
     $scope.data.user = {
-      email: 'Hamza@gmail.com',
+      email: 'chithewebdeveloper@gmail.com',
       password: '123456'
     }
 
@@ -23,9 +23,9 @@ angular.module('starter')
       localStorageService.set('outingGoCurrentUser', {
         gender: 'Male',
         id: 1,
-        location: 'New York, USA',
-        name: 'Hamza Seedat',
-        picture: 'https://d3lut3gzcpx87s.cloudfront.net/res/img/UnknownProfile.png'
+        location: 'Cebu, PH',
+        name: 'Chi Rilo',
+        picture: 'img/bukal-lanaya-2.jpg'
       });
       $state.go('app.info')
     };

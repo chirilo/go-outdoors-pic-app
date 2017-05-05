@@ -6,8 +6,8 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter')
   .constant("APP_CONFIG", {
-    appFacebookId: 916963528419425,
-    appFacebookName: "Outing Go",
+    appFacebookId: 829454043877914,
+    appFacebookName: "Go Out Pic App",
     appInstagramId: 'fb28ffbde44f490280a5293b49d62b56',
-    appInstagramName: 'Outing Go'
+    appInstagramName: 'Go OUT'
   });

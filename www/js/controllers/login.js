@@ -23,7 +23,7 @@ angular.module('starter')
       localStorageService.set('outingGoCurrentUser', {
         gender: 'Male',
         id: 1,
-        location: 'New York, USA',
+        location: 'Cebu, PH',
         name: 'Chi Rilo',
         picture: 'img/bukal-lanaya-2.jpg'
       });

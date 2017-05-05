@@ -5,19 +5,39 @@ angular.module('starter')
     $scope.data = {};
     $scope.data.items = [
       {
-        url: "http://del.h-cdn.co/assets/15/34/480x960/delish-fall-order-panera-pumpkinspicelatte.jpg",
+        url: "img/unsplash1.jpg",
         title: "Discover",
-        description: "Find recipes that match your taste & preference"
+        icon: "ion-paper-airplane",
+        button: "Discover and Explore",
+        description: "Find and participate to activities that match your genre & preference"
       },
       {
-        url: "http://www.scattidigusto.it/wp-content/uploads/2010/12/K-helvasi.jpg",
+        url: "img/unsplash2.jpg",
+        title: "Discover",
+        icon: "ion-paper-airplane",
+        button: "Discover and Explore",
+        description: "Find and participate to activities that match your genre & preference"
+      },
+      {
+        url: "img/unsplash3.jpg",
+        title: "Discover",
+        icon: "ion-paper-airplane",
+        button: "Discover and Explore",
+        description: "Find and participate to activities that match your genre & preference"
+      },
+      {
+        url: "img/unsplash4.jpg",
         title: "Share",
-        description: "Join the recipes Community & share your favorite recipe"
+        icon: "ion-images",
+        button: "Capture and Share",
+        description: "Join the outdoor activities Community, capture and share your favorite experiences"
       },
       {
-        url: "http://www.juztoday.com/deal/3561/img/5.jpg",
+        url: "img/unsplash5.jpg",
         title: "Enjoy",
-        description: "Join the recipes Community & share your favorite recipe"
+        icon: "ion-launcher",
+        button: "Join Now",
+        description: "What are you waiting for, come and join the Community"
       }
     ]
 

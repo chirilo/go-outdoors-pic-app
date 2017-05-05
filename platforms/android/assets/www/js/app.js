@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova', 'ngCordovaOauth', 'LocalStorageModule'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova', 'ngCordovaOauth', 'LocalStorageModule', 'ng-mfb'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -22,6 +22,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova', 'ngCordo
     });
   })
 
+  .factory('Projects', function() {
+    return {
+      all: function() {
+        var projectString = window.localStorage['projects'];
+        if (projectString) {
+          return angular.fromJson(projectString);
+        }
+        return [];
+      },
+      save: function(projects) {
+        window.localStorage['projects'] = angular.toJson(projects);
+      },
+      newProject: function(projectTitle) {
+        // Add a new project
+        return {
+          title: projectTitle,
+          tasks: []
+        };
+      },
+      getLastActiveIndex: function() {
+        return parseInt(window.localStorage['lastActiveProject']) || 0;
+      },
+      setLastActiveIndex: function(index) {
+        window.localStorage['lastActiveProject'] = index;
+      }
+    }
+  })
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
